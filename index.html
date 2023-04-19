@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boston's Most Popular Neighborhoods</title>
+	<style>
+		body {
+            background-color: #36393F;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+		.title-block {
+			background-image: url('boston_skyline_view_from_the_longfellow_bridge.jpg');
+			background-size: cover;
+			color: white;
+			text-align: center;
+			padding: 50px;
+			font-size: 36px;
+		
+		}
+
+		.section {
+			padding: 50px;
+			text-align: center;
+			border-top: 1px solid #B3B3B3;
+		}
+
+		.maps {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.map {
+			margin: 0 20px;
+		}
+
+		.ranking {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			color: #B3B3B3;
+		}
+
+		.ranking li {
+			margin: 5px 0;
+			font-size: 24px;
+			font-weight: bold;
+			list-style-type: none;
+			white-space: nowrap;
+		}
+
+
+
+		.distance-map {
+			margin-top: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.distance-list {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #B3B3B3;
+		}
+
+		.distance-list li {
+			margin: 5px 0;
+			font-size: 24px;
+			font-weight: bold;
+			list-style-type: none;
+			white-space: nowrap;
+		}
+
+
+		.analysis {
+			margin-top: 50px;
+			text-align: center;
+			padding-bottom: 30px;
+			border-top: 1px solid #B3B3B3;
+			border-bottom: 1px solid #B3B3B3;
+		}
+
+		.analysis button {
+			margin-top: 20px;
+			font-size: 24px;
+			padding: 20px;
+			border: none;
+			background-color: #203144;
+			color: white;
+			border-radius: 10px;
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+		}
+
+		.analysis button:hover {
+			background-color: #3e5f85;
+			box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+		}
+
+		.credits {
+			margin-top: 20px;
+			font-size: 18px;
+			text-align: center;
+		}
+		
+        h2,
+        h3 {
+            color: #B3B3B3;
+        }
+	</style>
+</head>
+
+<body>
+	<div class="title-block">
+		<h1>Boston's Most Popular Neighborhoods</h1>
+	</div>
+	<div class="section">
+		<h2>Heatmap / Popularity</h2>
+		<div class="maps">
+			<div class="map">
+				<h3>Heat Map</h3>
+				<iframe src="heatmap.html" width="500" height="500"></iframe>
+			</div>
+			<ul class="ranking">
+				<li>(Most To Least)</li>
+				<li>1. Seaport</li>
+				<li>2. Downtown Crossing</li>
+				<li>3. Chinatown</li>
+				<li>4. South End</li>
+				<li>5. South Boston</li>
+				<li>6. Beacon Hill</li>
+			</ul>
+			<div class="map">
+				<h3>Popularity</h3>
+				<iframe src="boston_neighborhoods_map.html" width="500" height="500"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h2>Distance To Shore</h2>
+		<div class="distance-map">
+			<div>
+				<h3>Avg. Distance To Shore</h3>
+				<iframe src="6map.html" width="500" height="500"></iframe>
+			</div>
+			<ul class="distance-list">
+				<li>(Closest to Farthest)</li>
+				<li>1. Downtown Crossing</li>
+				<li>2. Seaport</li>
+				<li>3. Chinatown</li>
+				<li>4. Beacon Hill</li>
+				<li>5. South Boston</li>
+				<li>6. South End</li>
+			</ul>
+		</div>
+	</div>
+	<div class="analysis">
+		<button onclick="location.href='analysis.html'">Analysis</button>
+	</div>
+	<div class="credits">
+		<em> Rohan Thomas, 2023</em>
+	</div>
